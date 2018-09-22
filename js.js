@@ -1,6 +1,7 @@
 let money,
     name,
-    time;
+    time,
+    price;
 
 function start() {
     money = prompt("Your Bank?");
@@ -18,7 +19,8 @@ let mainlist = {
   shopname: name,
   shopgoods: [],
   employers:{},
-  open: false
+  open: false,
+  discount: false
 }
 
 function chooseGoods() {
@@ -39,7 +41,7 @@ function workTime(time) {
   if (time < 0){
     console.log("Peace of shit!");
   } else if (time > 8 && time < 20 ){
-      console.log("this is work Time really!")
+      console.log("this is time to work really!!")
       }  else if (time < 24){
           console.log ("This is time of sleep");
           } else{
@@ -47,5 +49,42 @@ function workTime(time) {
             }
 
 }
+//workTime(18);
 
-console.log(mainlist);
+function bank() { 
+  alert("Ежедневный бюджет: " + mainlist.budzhet / 30);
+}
+
+//bank();
+
+function getPrice() {
+  var option = prompt("Введите сумму: " + price);
+  mainlist.discount = true;
+  var lostOfPrise = option * 0.8;
+  alert("Дисконтная система: " + lostOfPrise);
+}
+
+//getPrice(); 
+
+let employersName,
+    i;
+
+
+
+function employers() {
+  for (let i = 1; i <= 4 ; i++){
+    var employersName = prompt("Сотрудник номер " + [i] + " Имя Сотрудника: ");
+    var employersList = {
+      id: i,
+      name: employersName
+    }
+    console.log(employersList);
+  }
+  
+}
+employers();
+
+
+//console.log(mainlist);
+
+
