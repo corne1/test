@@ -1,4 +1,4 @@
-let money,
+/*let money,
     name,
     time,
     price;
@@ -83,8 +83,14 @@ function employers() {
   
 }
 employers();
+//console.log(mainlist);*/
 
+let first = [2, 60, 20,5];
 
-//console.log(mainlist);
+function sortNumbers(a,b) {
+  return a-b;
+}
 
+let i = first.sort(sortNumbers);
 
+console.log(first);
